@@ -55,7 +55,7 @@ The risk score is advisory and heuristic. It is not fraud detection. Merchant ve
 ## Project layout
 
 ```text
-intentlock/
+.
 ├── client/       React and Vite web app
 ├── server/       Express API, MongoDB models, policy and payment services
 ├── render.yaml   Render deployment configuration
@@ -71,7 +71,7 @@ intentlock/
 
 ## Run locally
 
-Run commands from this project directory (the `intentlock/` folder in the GitHub repository).
+Run commands from the repository root.
 
 ### 1. Configure and start the API
 
@@ -165,7 +165,7 @@ All routes except `/health`, registration, and login require a bearer token unle
 
 ## Deployment
 
-[`render.yaml`](render.yaml) defines an API web service and a static web app. If deploying this project from the `Intentlock-paypal-hackathon` repository, set each Render service's root directory to `intentlock/server` or `intentlock/client` (the YAML root directories assume the project itself is the repository root). Configure the unsynced environment variables in Render. Set `VITE_API_URL` to the deployed API URL plus `/api`, and set `CLIENT_URL` on the API to the deployed web app origin. Use a MongoDB connection string and PayPal Sandbox credentials. Keep secrets in the hosting provider's environment settings, not in source control.
+[`render.yaml`](render.yaml) defines an API web service and a static web app. Configure its unsynced environment variables in Render. Set `VITE_API_URL` to the deployed API URL plus `/api`, and set `CLIENT_URL` on the API to the deployed web app origin. Use a MongoDB connection string and PayPal Sandbox credentials. Keep secrets in the hosting provider's environment settings, not in source control.
 
 ## Limitations
 
